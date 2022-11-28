@@ -1,26 +1,25 @@
-public class ContaCorrente extends Conta implements Tributavel{
-
-    public ContaCorrente(double saldo, int numero, int agencia) {
-        super(saldo, numero, agencia);
+public class ContaCorrente extends Conta implements Tributavel {
+    public ContaCorrente(int numero, int agencia) {
+        super(numero, agencia);
     }
 
-    @Override
-    public void transfere(double saldo, Conta c) {
-       double saldo_atual = this.getSaldo();
-       if (saldo_atual < saldo*1.05) {
-           System.out.println("valor inferior ao valor da conta\nA tranferência não foi concluida.");
-       }else{
-           saldo_atual = saldo_atual - saldo*1.05;
-           c.setSaldo(c.getSaldo()+saldo);
-           System.out.printf("valor: R$%.2f tranferido com sucesso.\nImpostos de 5%% por transferêcia de Conta Corrente (R$%.2f) \n",saldo,saldo*0.05);
-           this.setSaldo(saldo_atual);
-       }
+    public void transfere(double valor, Conta destino) {
+        double valor_com_imposto = valor * 1.05;
+        this.saca(valor_com_imposto - 0.2);
+        destino.deposita(valor);
     }
 
-    @Override
+    public void saca(double valor) {
+        valor += 0.2;
+        if (this.getSaldo() < valor) {
+            throw new SaldoInsuficienteException("Saldo atual: R$%.2f Valor da operação: R$%.2f não realizada\nSALDO INSUFICIENTE".formatted(this.getSaldo(), valor));
+        } else {
+            super.setSaldo(this.getSaldo() - valor);
+        }
+    }
+
     public double getvalorimposto() {
         double imposto = 0.14;
-        return this.getSaldo()* imposto;
-
+        return this.getSaldo() * imposto;
     }
 }

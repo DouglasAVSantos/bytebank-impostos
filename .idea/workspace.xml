@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a003ed38-eb2a-4826-a061-2ca8f319c877" name="Changes" comment="1.1">
-      <change afterPath="$PROJECT_DIR$/src/CalculadorDeImpostos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SeguroDeVida.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TesteCalculadordeImpostos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TesteTransfereSaldo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tributavel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SaldoInsuficienteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TesteSaca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bytebank-impostos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bytebank-impostos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaCorrente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContaPaupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaPaupanca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TesteTransfereSaldo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TesteTransfereSaldo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="63cb4d8c027a488907ed42c02521445fa812d8e4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="13400437-3a5b-4e93-865d-55dba53bc000" />
+        <option name="url" value="https://github.com/DouglasAVSantos/bytebank-impostos" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,24 +50,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TesteTransfereSaldo">
+  <component name="RunManager" selected="Application.TesteCalculadordeImpostos">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="bytebank-impostos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TesteCalculadordeImpostos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TesteCalculadordeImpostos" />
+      <module name="bytebank-impostos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TesteSaca" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TesteSaca" />
       <module name="bytebank-impostos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,8 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TesteCalculadordeImpostos" />
+        <item itemvalue="Application.TesteSaca" />
         <item itemvalue="Application.TesteTransfereSaldo" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TesteTransfereSaldo" />
       </list>
     </recent_temporary>
   </component>
@@ -120,13 +141,43 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="bb/123" />
+                        <option value="Aulas-Java-OO" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Aulas-Java-OO" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="bb/Aulas-Java-OO" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

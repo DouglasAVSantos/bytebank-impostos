@@ -2,7 +2,7 @@
 public class TesteCalculadordeImpostos {
     public static void main(String[] args) {
 
-    Conta c1 = new ContaCorrente(100,44,5898);
+    Conta c1 = new ContaCorrente(100,5898);
     CalculadorDeImpostos calc = new CalculadorDeImpostos();
 
     c1.setSaldo(100);
